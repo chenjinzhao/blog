@@ -1,11 +1,13 @@
 package cn.chenjinzhao.blog.pojo.po;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.util.Date;
 
 /**
- * TODO
+ * Article
  *
  * @author 陈今朝
  * @date 2020/8/12 20:27
@@ -13,7 +15,8 @@ import java.util.Date;
 
 @Data
 public class Article {
-    private int id;
+    @TableId(value = "id",type = IdType.INPUT)
+    private Integer id;
     private String title;
     private String mdContent;
     private String htmlContent;

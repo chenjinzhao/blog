@@ -1,5 +1,7 @@
 package cn.chenjinzhao.blog.pojo.po;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 /**
@@ -8,6 +10,7 @@ import lombok.Data;
  */
 @Data
 public class Permission {
-    private int id;
+    @TableId(value = "id",type = IdType.INPUT)
+    private Integer id;
     private String permissionName;
 }

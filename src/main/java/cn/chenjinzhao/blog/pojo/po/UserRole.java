@@ -1,6 +1,8 @@
 package cn.chenjinzhao.blog.pojo.po;
 
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,7 +10,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 /**
- * TODO
+ * UserRole
  *
  * @author 陈今朝
  * @date 2020/8/18 19:33
@@ -17,6 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserRole {
+    @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private Integer uid;
     private Integer rid;

@@ -11,7 +11,7 @@ import lombok.ToString;
  */
 @Data
 @ToString
-public class Result<T> {
+public class CommonResult<T> {
     private Integer code;
     private String msg;
     private T data;
