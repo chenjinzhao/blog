@@ -13,6 +13,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
@@ -44,6 +45,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     JwtUtil jwtUtil;
 
     @Override
+    @Cacheable(value="user",key="'email::'+#email")
     public User getUserByEmail(String email) {
         return baseMapper.selectByEmail(email);
     }

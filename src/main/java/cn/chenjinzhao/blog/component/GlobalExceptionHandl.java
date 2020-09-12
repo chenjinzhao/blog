@@ -18,6 +18,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 @Slf4j
 public class GlobalExceptionHandl {
+    /**
+     *
+     * @param e
+     * @return
+     */
     @ExceptionHandler(value = RuntimeException.class)  //申明捕获那个异常类
     @ResponseBody
     public CommonResult handle(Exception e) {

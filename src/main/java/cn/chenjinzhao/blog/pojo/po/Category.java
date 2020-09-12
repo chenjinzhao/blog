@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * Category
  *
@@ -11,7 +13,8 @@ import lombok.Data;
  * @date 2020/8/12 20:27
  */
 @Data
-public class Category {
+public class Category implements Serializable{
+
     @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private String cateName;

@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -17,7 +18,7 @@ import java.util.Date;
  * @date 2020/8/12 20:27
  */
 @Data
-public class User {
+public class User  implements Serializable {
     @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private String email;

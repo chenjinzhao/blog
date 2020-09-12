@@ -7,6 +7,7 @@ import cn.chenjinzhao.blog.pojo.po.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * @author 陈今朝
  * @date 2020/9/7 18:34
  */
+@Repository
 public interface PermissionMapper extends BaseMapper<Permission> {
     /**
      * 根据角色查找权限

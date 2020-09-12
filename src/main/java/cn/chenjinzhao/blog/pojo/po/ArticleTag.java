@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * ArticleTag
  *
@@ -11,7 +13,7 @@ import lombok.Data;
  * @date 2020/8/12 20:27
  */
 @Data
-public class ArticleTag {
+public class ArticleTag implements Serializable {
     @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private Integer aid;

@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 /**
  * Role
@@ -12,7 +14,7 @@ import lombok.Data;
  * @date 2020/8/18 19:33
  */
 @Data
-public class Role {
+public class Role  implements Serializable {
     @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private String roleName;

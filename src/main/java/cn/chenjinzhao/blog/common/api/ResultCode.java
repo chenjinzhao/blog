@@ -15,6 +15,7 @@ public enum ResultCode implements IErrorCode {
     VALIDATE_FAILED(404, "参数验证失败"),
     REGISTRATION_FAIL(10001,"注册失败"),
     LOGON_FAILURE(40001, "登陆失败"),
+    USER_IS_NOT_ENABLE(40002, "用户未启用"),
     UNKNOWN_ERROR(50000,"未知错误");
 
     private Integer code;

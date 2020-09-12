@@ -2,8 +2,10 @@ package cn.chenjinzhao.blog.pojo.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -14,7 +16,7 @@ import java.util.Date;
  */
 
 @Data
-public class Article {
+public class Article  implements Serializable {
     @TableId(value = "id",type = IdType.INPUT)
     private Integer id;
     private String title;

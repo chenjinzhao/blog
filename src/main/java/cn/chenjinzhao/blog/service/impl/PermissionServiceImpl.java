@@ -9,6 +9,7 @@ import cn.chenjinzhao.blog.service.PermissionService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +30,7 @@ public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permiss
 
 
     @Override
+    @Cacheable(value="permission",key="'userId::'+#userId")
     public List<Permission> getPermissionList(Integer userId) {
         List<Integer> rids = roleMapper.selectRidsByUid(userId);
         List<Permission> permissionList = permissionMapper.selectByRids(rids);

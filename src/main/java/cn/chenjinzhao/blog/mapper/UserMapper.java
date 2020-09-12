@@ -4,6 +4,7 @@ import cn.chenjinzhao.blog.pojo.dto.UserRegisterParam;
 import cn.chenjinzhao.blog.pojo.po.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * UserMapper
@@ -11,6 +12,7 @@ import org.apache.ibatis.annotations.Param;
  * @author 陈今朝
  * @date 2020/9/7 17:00
  */
+@Repository
 public interface UserMapper extends BaseMapper<User> {
     /**
      * 根据email查找user
